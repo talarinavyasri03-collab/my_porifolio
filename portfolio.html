@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Talari Navyasri | Frontend Developer</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#f4f7fc;
+      color:#333;
+    }
+
+    /* Header */
+
+    header{
+      background:#0f172a;
+      color:white;
+      min-height:100vh;
+      padding:20px 10%;
+    }
+
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .logo{
+      font-size:32px;
+      font-weight:bold;
+      color:#38bdf8;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:20px;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:white;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#38bdf8;
+    }
+
+    /* Hero Section */
+
+    .hero{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-top:80px;
+      flex-wrap:wrap;
+    }
+
+    .hero-text{
+      flex:1;
+    }
+
+    .hero-text h1{
+      font-size:55px;
+      margin-bottom:20px;
+    }
+
+    .hero-text span{
+      color:#38bdf8;
+    }
+
+    .hero-text p{
+      font-size:20px;
+      line-height:1.8;
+      margin-bottom:25px;
+      max-width:600px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:12px 28px;
+      background:#38bdf8;
+      color:white;
+      text-decoration:none;
+      border-radius:8px;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#0284c7;
+    }
+
+    /* Circular Image */
+
+    .hero-image img{
+      width:320px;
+      height:320px;
+      border-radius:50%;
+      object-fit:cover;
+      border:5px solid #38bdf8;
+      box-shadow:0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    /* Section Common */
+
+    section{
+      padding:80px 10%;
+    }
+
+    section h2{
+      text-align:center;
+      font-size:38px;
+      margin-bottom:40px;
+      color:#0f172a;
+    }
+
+    /* About */
+
+    .about{
+      text-align:center;
+      font-size:18px;
+      line-height:1.8;
+      max-width:900px;
+      margin:auto;
+    }
+
+    /* Skills */
+
+    .skills-container{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:20px;
+    }
+
+    .skill{
+      background:#2563eb;
+      color:white;
+      padding:15px 25px;
+      border-radius:25px;
+      font-size:18px;
+      transition:0.3s;
+    }
+
+    .skill:hover{
+      transform:scale(1.1);
+    }
+
+    /* Projects */
+
+    .projects-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
+    }
+
+    .project-card{
+      background:white;
+      padding:25px;
+      border-radius:12px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .project-card:hover{
+      transform:translateY(-10px);
+    }
+
+    .project-card h3{
+      color:#2563eb;
+      margin-bottom:15px;
+    }
+
+    .project-card p{
+      line-height:1.6;
+    }
+
+    /* Certifications */
+
+    .certifications ul{
+      max-width:700px;
+      margin:auto;
+      line-height:2;
+      font-size:18px;
+    }
+
+    /* Contact */
+
+    .contact{
+      text-align:center;
+    }
+
+    .contact p{
+      margin:15px 0;
+      font-size:18px;
+    }
+
+    .contact i{
+      color:#2563eb;
+      margin-right:10px;
+    }
+
+    /* Footer */
+
+    footer{
+      background:#0f172a;
+      color:white;
+      text-align:center;
+      padding:20px;
+    }
+
+    /* Responsive */
+
+    @media(max-width:768px){
+
+      nav{
+        flex-direction:column;
+      }
+
+      nav ul{
+        margin-top:15px;
+      }
+
+      .hero{
+        flex-direction:column;
+        text-align:center;
+      }
+
+      .hero-text h1{
+        font-size:40px;
+      }
+
+      .hero-image img{
+        width:250px;
+        height:250px;
+        margin-top:30px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+
+  <header>
+
+    <nav>
+
+      <div class="logo">Navyasri</div>
+
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+    </nav>
+
+    <!-- Hero Section -->
+
+    <div class="hero">
+
+      <div class="hero-text">
+
+        <h1>Hello, I'm <span>Talari Navyasri</span></h1>
+
+        <p>
+          Aspiring Frontend Developer passionate about creating
+          responsive and user-friendly websites using HTML, CSS,
+          JavaScript, and modern web technologies.
+        </p>
+
+        <a href="#contact" class="btn">Contact Me</a>
+
+      </div>
+
+      <div class="hero-image">
+
+        <!-- Replace image path with your image -->
+        <img src="navyasri_image.jpg" alt="Talari Navyasri">
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <!-- About Section -->
+
+  <section id="about">
+
+    <h2>About Me</h2>
+
+    <div class="about">
+
+      <p>
+        Motivated Computer Science Engineering student with
+        expertise in HTML, CSS, Python, and MySQL. Passionate
+        about frontend development and building scalable,
+        responsive, and visually appealing web applications.
+        Seeking opportunities to contribute technical skills
+        and creativity to innovative projects.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- Skills Section -->
+
+  <section id="skills">
+
+    <h2>Skills</h2>
+
+    <div class="skills-container">
+
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Python</div>
+      <div class="skill">MySQL</div>
+      <div class="skill">VS Code</div>
+      <div class="skill">Problem Solving</div>
+      <div class="skill">Leadership</div>
+
+    </div>
+
+  </section>
+
+  <!-- Projects Section -->
+
+  <section id="projects">
+
+    <h2>Projects</h2>
+
+    <div class="projects-container">
+
+      <div class="project-card">
+
+        <h3>Carpooling System</h3>
+
+        <p>
+          Developed a ride-sharing platform that helps users
+          communicate and share rides efficiently while reducing
+          traffic congestion and pollution.
+        </p>
+
+      </div>
+
+      <div class="project-card">
+
+        <h3>Privacy-Preserving Machine Learning</h3>
+
+        <p>
+          Worked on machine learning privacy techniques such as
+          differential privacy and federated learning to improve
+          secure AI systems.
+        </p>
+
+      </div>
+
+      <div class="project-card">
+
+        <h3>Ontology-Based Autonomous ML</h3>
+
+        <p>
+          Designed automated ML workflows using UML diagrams,
+          ontology models, and intelligent task execution.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Certifications -->
+
+  <section id="certifications" class="certifications">
+
+    <h2>Certifications</h2>
+
+    <ul>
+      <li>Python Programming Language – Mind Luster</li>
+      <li>C Programming Language & SQL for Business Analytics</li>
+      <li>HTML For Beginners – Mind Luster</li>
+      <li>Introduction to Artificial Intelligence – Great Learning</li>
+    </ul>
+
+  </section>
+
+  <!-- Contact -->
+
+  <section id="contact" class="contact">
+
+    <h2>Contact Me</h2>
+
+    <p>
+      <i class="fa-solid fa-envelope"></i>
+      talarinavyasri03@gmail.com
+    </p>
+
+    <p>
+      <i class="fa-solid fa-phone"></i>
+      +91 8008453860
+    </p>
+
+    <p>
+      <i class="fa-brands fa-linkedin"></i>
+      linkedin.com/in/talari-navyasri
+    </p>
+
+  </section>
+
+  <!-- Footer -->
+
+  <footer>
+
+    <p>© 2026 Talari Navyasri | Frontend Developer Portfolio</p>
+
+  </footer>
+
+  <!-- JavaScript -->
+
+  <script>
+
+    // Welcome Console Message
+
+    window.onload = function(){
+
+      console.log("Portfolio Website Loaded Successfully!");
+
+    };
+
+    // Active Navigation Link
+
+    const links = document.querySelectorAll("nav ul li a");
+
+    links.forEach(link => {
+
+      link.addEventListener("click", function(){
+
+        links.forEach(nav => nav.classList.remove("active"));
+
+        this.classList.add("active");
+
+      });
+
+    });
+
+  </script>
+
+</body>
+</html>
